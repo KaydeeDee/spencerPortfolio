@@ -1,0 +1,51 @@
+.aboutMeSection {
+    // position: relative;
+
+    > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    // styled lines
+    .styledMiniLine:first-of-type {
+        top: -40px;
+    }
+
+    .styledMiniLine:nth-of-type(2){
+        bottom: -40px;
+    }
+}
+
+// photos section
+.aboutMeSectionPhotos {
+    // position: relative;
+    // max-width: 40%;
+}
+
+// wording section
+.aboutMeSectionWording {
+    max-width: 50%;
+    position: relative;
+
+        button {
+            margin-top: 20px;
+        }
+}
+
+// media queries
+@media (max-width: 955px) {
+    .aboutMeSection > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .aboutMeSectionWording {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 80%;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.publications-subSections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+        strong {
+            font-weight: 600;
+        }
+}
+
+.publications-text {
+    width: 70%;
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        > div {
+            margin-top: 15px;
+        }
+}
+
+.publications-buttonSpace {
+    margin-right: 10px;
+}
+
+.publications-subSections:nth-of-type(2n) .publications-text {
+    text-align: right;
+}

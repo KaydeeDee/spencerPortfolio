@@ -1,0 +1,150 @@
+// base size
+
+html {
+    font-size: 62.5%;
+}
+
+// stripping styles
+
+h1, h2, h3, h4, ul, li, p {
+    margin: 0;
+    padding: 0;
+    color: $black;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+// wrapper
+.maxWrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.innerWrapper {
+    max-width: 1300px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+// p, a and button
+body {
+    background: $white;
+
+    p, a, button {
+        @include font-size-value(17);
+        font-family: $body-text;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    p, a {
+        color: $black;
+    }
+
+}
+
+// sections
+.globalSectionBase {
+    padding: 80px 0;
+}
+
+// titles
+h3 {
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    font-family: $header-text;
+    @include font-size-value(45);
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+
+h4 {
+    @include font-size-value(19.5);
+    font-family: $header-text;
+    font-weight: 600;
+}
+
+// buttons
+.globalButton {
+    @include globalButton;
+}
+
+//general anchor
+section a {
+    color: $black;
+    border-bottom: 2px dotted $highlight;
+    transition: $transitionTiming;
+        &:hover, &:focus {
+            color: $highlight;
+        }
+}
+
+// styled mini lines in each section
+.styledMiniLine {
+    display: inline-block;
+    background-color: lighten($darkOverlay, 20%);
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+// tooltips
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipText {
+    display: none;
+    width: 120px;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: -46px;
+    border-radius: 3px;
+}
+
+.tooltipText::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    // margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent $black transparent;
+}
+
+.tooltip:hover .tooltipText {
+    display: block;
+}
+
+// media queries
+@media (max-width: 955px) {
+    .styledMiniLine {
+        display: none;
+    }
+    section {
+        padding: 50px 0 60px;
+    }
+}

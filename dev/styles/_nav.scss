@@ -1,0 +1,184 @@
+nav {
+    border-bottom: 1px solid $white;
+}
+
+nav ul {
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+
+                a {
+                    color: $white;
+                    @include font-size-value(18);
+                    padding: 0 10%;
+                    transition: $transitionTiming;
+                    text-transform: uppercase;
+
+                }
+
+    }
+
+.logoSocials {
+    width: 80%;
+    padding: 15px 0;
+}
+
+.logoSocials div, .logoSocials ul {
+    display: flex;
+}
+
+.logoSocials div {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px 0;
+
+        i, i.ai {
+            color: $white;
+            padding: 0 6px;
+            transition: $transitionTiming;
+
+                &:hover {
+                    color: $highlight;
+                }
+        }
+
+        i {
+            @include font-size-value(18);
+        }
+
+        i.ai {
+            @include font-size-value(22);
+        }
+}
+
+.navOpacity {
+    opacity: 0.4;
+}
+
+.navSelected {
+    color: $highlight;
+}
+
+//hamburger menu
+.hamburger--clickContainer {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 5;
+    position: fixed;
+    border: 1px solid red;
+    right: 15px;
+    top: 0;
+
+        &:hover {
+            background: pink;
+        }
+
+    span {
+        width: 20px;
+        height: 3px;
+        background: red;
+        display: inline-block;
+        margin: 2px 0;
+    }
+}
+
+.open--logoSocials{
+    width: 100%;
+    position: fixed;
+    border: 1px solid red;
+    padding-left: 15px;
+
+    img, ul:first-of-type {
+        display: none;
+    }
+    > div {
+        justify-content: flex-start;
+    }
+
+    ul {
+        margin-top: 5px;
+            li {
+                margin: 0px 4px;
+            }
+    }
+}
+
+.open--hamburger {
+    transition: $transitionTiming;
+    background: $black;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    z-index: 10;
+    position: fixed;
+
+    span:first-of-type {
+        background: pink;
+    }
+
+    ~ .hamburgerNav {
+        display: block;
+        border: none;
+        position: fixed;
+        z-index: 10;
+    }
+
+    ~ .open--logoSocials ul:first-of-type,
+    ~ .open--logoSocials,
+    ~ .open--logoSocials img  {
+        display: flex;
+        z-index: 10;
+        justify-content: space-between;
+    }
+
+    ~ .open--logoSocials {
+        bottom: 20px;
+        
+            > div {
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+    }
+
+    ~ .hamburgerNav {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+    }
+
+    ~ .logoSocials ul i,
+    ~ .hamburgerNav li a {
+        @include font-size-value(25);
+    }
+
+    ~ .hamburgerNav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+            li {
+                margin: 15px;
+
+                    a {
+                        padding: 10px;
+                    }
+            }
+    }
+}
+
+// media queries
+@media (max-width: 950px) {
+    nav {
+        display: none;
+    }
+    .hamburger--clickContainer {
+        display: flex;
+    }
+}
+
+

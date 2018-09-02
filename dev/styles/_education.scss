@@ -1,0 +1,30 @@
+.educationSection {
+    background: linear-gradient(#e66465, #9198e5), url('assets/education.jpg');
+    background-position-y: 50%;
+    background-size: cover;
+
+
+    h3 {
+        color: $white;
+    }
+
+    .educationSection--body {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.education-indvEd {
+    display: flex;
+    align-items: center;
+      > p {
+          margin-right: 10px;
+          @include font-size-value(25);
+          font-weight: 700;
+          color: $white;
+      }
+
+      p {
+          color: $white;
+      }
+}

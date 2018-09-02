@@ -1,0 +1,24 @@
+.researchSection {
+    background: rgba(74,83, 61, 0.1);
+
+        h4 {
+            margin: 15px 0;
+        }
+
+        h4:nth-of-type(2) {
+            margin-top: 35px;
+        }
+
+        > div {
+            position: relative;
+        }
+
+         // styled lines
+    .styledMiniLine:first-of-type {
+        top: -40px;
+    }
+
+    .styledMiniLine:nth-of-type(2){
+        bottom: -40px;
+    }
+}

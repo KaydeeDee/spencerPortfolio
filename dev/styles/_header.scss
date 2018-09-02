@@ -1,0 +1,40 @@
+header {
+    background: url('assets/landscapev6.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+
+        .headerTitles {
+            padding-top: 10vw;
+            margin-left: 13%;
+            
+            > div {
+                margin-top: 8px;
+            }
+        }
+
+        h1, h2 {
+            color: $white;
+            text-transform: capitalize;
+            font-family: $header-text;
+            // text-shadow: 0.2px 0.2px 0.1px rgba(58,56,56, 0.6);
+        }
+
+        h1 {
+            font-size: 4.8vw;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+        }
+
+        h2 {
+            font-size: 3.2vw;
+            font-weight: 400;
+            letter-spacing: 1.8px;
+            width: 30%;
+            line-height: 3.4vw;
+            font-weight: 300;
+            color: darken($white, 2%);
+        }
+
+}

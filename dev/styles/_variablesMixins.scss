@@ -22,6 +22,24 @@ $body-text: 'Open Sans', sans-serif;
     font-size: ($sizeValue/10) * 1rem;
 }
 
+    // fade in effect
+    @mixin fade-in-effect($duration, $delay) {
+        opacity: 0;
+        animation: fadeIn ease-in $duration;
+        animation-fill-mode: forwards;
+        animation-duration: $duration;
+        animation-delay: $delay;
+    }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
 
 //button
 @mixin globalButton {

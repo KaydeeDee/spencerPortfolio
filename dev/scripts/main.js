@@ -9,33 +9,39 @@ function scrollNav(){
     });
 }
 
-    // responsive menu - hamburger
-    const onResize = function () {
-        if ($(window).width() <= 935) {
-            console.log("first: " + $(window).width());
-            $('.logoSocials').addClass('open--logoSocials');
-            $('.hamburger--clickContainer').click( function() {
-                    $('.hamburger').toggleClass('open--hamburger');
-                    console.log('clicked');
-                }
-            );
-            openHamStyles();
-        } else {
-            console.log("second: " + $(window).width());
-            $('.logoSocials').removeClass('open--logoSocials');
-            $('.hamburger').removeClass('open--hamburger');
-        }
+// media query listener on resize
+function mediaSize() {
+    if (window.matchMedia('(max-width: 950px)').matches) {
+        $('.logoSocials').addClass('open--logoSocials');
     }
+    else {
+        $('.logoSocials').removeClass('open--logoSocials');
+        $('.hamburger').removeClass('open--hamburger');
+    }
+};
 
-    // open hamburger menu
+// Attach the function to the resize event listener 
+window.addEventListener('resize', mediaSize, false);
+
+function openHamburger() {
+    $('.hamburger--clickContainer').click(function () {
+        $('.hamburger').toggleClass('open--hamburger');
+        console.log('clicked');
+    }
+    );
+    openHamStyles();
+}
+
+
+    // open hamburger menu 
     function openHamStyles() {
         $('nav').addClass('hamburgerNav');
-        $('nav a').click(
+        $('nav li a').click(
             function() {
                 $('.hamburger').removeClass('open--hamburger');
             }
         )
-    }
+    };
 
 
     // Smooth scroll
@@ -53,17 +59,80 @@ $('nav a').hover(function () {
 }, function () {
     $('nav a').removeClass('navOpacity');
 }
-).click(function () {
-    $('nav a').removeClass('navSelected');
-    $(this).addClass('navSelected');
+)
 }
-);
-}
+
+// waypoints for scroll nav
+// function sectionListeners(){
+// var waypoint = new Waypoint({
+//     element: document.getElementById('headerTitles'),
+//     handler: function (direction) {
+//         $('nav a').removeClass('navOpacity');
+//     },
+//     offset: '-15%'
+// });
+
+// var waypoint = new Waypoint({
+//     element: document.getElementById('toAbout'),
+//     handler: function(direction) {
+//         $('nav a').addClass('navOpacity').removeClass('navSelected');
+//         $('#toAboutLink').removeClass('navOpacity').addClass('navSelected');
+//     },
+//     offset: '10%'
+// });
+
+// var waypoint = new Waypoint({
+//     element: document.getElementById('toResearch'),
+//     handler: function (direction) {
+//         $('nav a').addClass('navOpacity').removeClass('navSelected');
+//         $('#toResearchLink').removeClass('navOpacity').addClass('navSelected');
+//     },
+//     offset: '10%'
+// });
+
+// var waypoint = new Waypoint({
+//     element: document.getElementById('toEducation'),
+//     handler: function (direction) {
+//         $('nav a').addClass('navOpacity').removeClass('navSelected');
+//         $('#toEducationLink').removeClass('navOpacity').addClass('navSelected');
+//     },
+//     offset: '10%'
+// });
+
+// var waypoint = new Waypoint({
+//     element: document.getElementById('toPublications'),
+//     handler: function (direction) {
+//         $('nav a').addClass('navOpacity').removeClass('navSelected');
+//         $('#toPublicationsLink').removeClass('navOpacity').addClass('navSelected');
+//     },
+//     offset: '10%'
+// });
+
+// var waypoint = new Waypoint({
+//     element: document.getElementById('toSkills'),
+//     handler: function (direction) {
+//         $('nav a').addClass('navOpacity').removeClass('navSelected');
+//         $('#toSkillsLink').removeClass('navOpacity').addClass('navSelected');
+//     },
+//     offset: '10%'
+// });
+
+// var waypoint = new Waypoint({
+//     element: document.getElementById('toContact'),
+//     handler: function () {
+//         $('nav a').addClass('navOpacity').removeClass('navSelected');
+//         $('#toContactLink').removeClass('navOpacity').addClass('navSelected');
+//     }
+// });
+// }
 
 function generalStyles(){
     hoverClick();
     smoothScrollOn();
     scrollNav();
+
+    openHamburger();
+    // sectionListeners();
 }
 
 
@@ -73,8 +142,9 @@ $(function () {
 
     console.log(ohHey);
 
-    $(window).ready(onResize);
-    $(window).resize(onResize);
+    mediaSize();
+
+
     generalStyles();
 
 }); //end ready

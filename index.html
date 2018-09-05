@@ -5,9 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link type="image/png" href="public/styles/assets/SKM-favicon.png" rel="icon">
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,500,600,700" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
 	 crossorigin="anonymous">
+
 	<link rel="stylesheet" href="public/styles/academicons.min.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="public/styles/style.css" />
 </head>
@@ -41,12 +46,13 @@
 			</div>
 			<nav class="innerWrapper">
 				<ul>
-					<li><a href="#toAbout">about</a></li>
-					<li><a href="#toResearch">research</a></li>
-					<li><a href="#toPublications">publications</a></li>
-					<li><a href="#toEducation">education</a></li>
-					<li><a href="#toSkills">skills</a></li>
-					<li><a href="#toContact">contact</a></li>
+					<li><a href="#toAbout" id="toAboutLink">about</a></li>
+					<li><a href="#toResearch" id="toResearchLink">research</a></li>
+					<li><a href="#toEducation" id="toEducationLink">education</a>
+					</li>
+					<li><a href="#toPublications" id="toPublicationsLink">publications</a></li>
+					<li><a href="#toSkills" id="toSkillsLink">skills</a></li>
+					<li><a href="#toContact" id="toContactLink">contact</a></li>
 				</ul>
 			</nav>
 			<div class="innerWrapper headerTitles" id="headerTitles">
@@ -194,33 +200,87 @@
 					</div>
 				</div>
 			</section>
-			<section class="skillsSection innerWrapper globalSectionBase" id="toSkills">
+			<section class="globalSectionBase skillsSection" id="toSkills">
 				<h3>skills</h3>
-				<div>
-					<div class="skills-indvContainer skills-indvContainerFirst">
-						<h4>maps</h4>
-						<p>I love maps. I have geocoded thousands of specimen records, and have produced publication-quality distribution maps, geophylogenies,
-						and maps of biogeographic regions using ArcGIS, QGIS, Google Earth, etc.</p>
-					</div>
-					<div class="skills-indvContainer skills-indvContainerSecond">
-						<h4>maps</h4>
-						<p>I love maps. I have geocoded thousands of specimen records, and have produced publication-quality distribution maps, geophylogenies,
+				<div class="innerWrapper">
+					<div class="skills--innerSection">
+						<div class="skills-indvContainer">
+							<img src="./public/styles/assets/maps.png" alt="Icon of a map">
+							<h4>maps</h4>
+							<p>I love maps. I have geocoded thousands of specimen records, and have produced publication-quality distribution maps, geophylogenies,
 							and maps of biogeographic regions using ArcGIS, QGIS, Google Earth, etc.</p>
-					</div>
-					<div class="skills-indvContainer skills-indvContainerThird">
-						<h4>maps</h4>
-						<p>I love maps. I have geocoded thousands of specimen records, and have produced publication-quality distribution maps, geophylogenies,
-							and maps of biogeographic regions using ArcGIS, QGIS, Google Earth, etc.</p>
-					</div>
-					<div class="skills-indvContainer skills-indvContainerLast">
-						<h4>maps</h4>
-						<p>I love maps. I have geocoded thousands of specimen records, and have produced publication-quality distribution maps, geophylogenies,
-							and maps of biogeographic regions using ArcGIS, QGIS, Google Earth, etc.</p>
+						</div>
+						<div class="skills-indvContainer">
+							<img src="./public/styles/assets/illustration.png" alt="Icon of a pen">
+							<h4>illustrations</h4>
+							<p>I have excellent working knowledge of Adobe Photoshop and Illustrator. I regularly use both to produce clean, high-quality
+							images & illustrations for research. Non-scientific illustration is also a hobby of mine.</p>
+						</div>
+						<div class="skills-indvContainer">
+							<img src="./public/styles/assets/communication.png" alt="">
+							<h4>communication</h4>
+							<p>In addition to academic talks and publications, I am skilled at engaging with community groups and writing for the general
+							public. I enjoy finding clear, intuitive, and compelling ways to communicate biological knowledge to non-experts.</p>
+						</div>
+						<div class="skills-indvContainer">
+							<img src="./public/styles/assets/curation.png" alt="">
+							<h4>curation</h4>
+							<p>I have processed and curated thousands of insect specimens. I have plenty of practical knowledge of curatorial methods as
+							well as experience building and maintaining databases. I have visited and worked in a number of large natural history collections.</p>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="globalSectionBase contactSection innerWrapper" id="toContact">
+				<h3>contact</h3>
+				<form action="https://formspree.io/s.monckton@gmail.com" method="POST">
+					<label for="nameFull">Name</label>
+					<span>required</span>
+					<input type="text" id="nameFull" name="spencer" required>
 
+					<label for="emailForm">Email</label>
+					<span>required</span>
+					<input type="email" name="replyToSpencer" id="emailForm" required>
+
+					<label for="emailMessage">Message</label>
+					<span>required</span>
+					<textarea value="Send" name="messageForSpencer" id="emailMessage" required minlength="5" placeholder="Let me know how we can work together!" cols="30" rows="10">
+					</textarea>
+
+					<button type="submit" class="globalButton">send</button>
+				</form>
+				<ul class="contact--socials">
+					<li>
+						<a href="https://twitter.com/skmonckton" target="_blank">
+							<i class="fab fa-twitter"></i>
+							<p>twitter</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://scholar.google.ca/citations?user=h70plIQAAAAJ&amp;hl=en" target="_blank">
+							<i class="ai ai-google-scholar"></i>
+							<p>google scholar</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://orcid.org/0000-0002-9879-9118" target="_blank">
+							<i class="ai ai-orcid"></i>
+							<p>orchid id</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://publons.com/author/1195865/spencer-k-monckton" target="_blank">
+							<i class="ai ai-publons"></i>
+							<p>publons</p>
+						</a>
+					</li>
+					<li>
+						<a href="mailto:s.monckton@gmail.com" target="_blank">
+							<i class="far fa-envelope" aria-hidden="true"></i>
+							<p>email</p>
+						</a>
+					</li>
+				</ul>
 			</section>
 		</main>
 	</div>

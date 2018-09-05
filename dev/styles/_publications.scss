@@ -27,3 +27,22 @@
 .publications-subSections:nth-of-type(2n) .publications-text {
     text-align: right;
 }
+
+// media query
+@media (max-width: 950px) {
+    .publications-subSections {
+        flex-direction: column;
+        margin: 40px 0;
+    }
+
+    .publications-subSections:nth-of-type(2n){
+        flex-direction: column-reverse;
+        .publications-text {
+            text-align: center;
+        }
+    }
+    .publications-text {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,31 +1,41 @@
 .skillsSection {
-    > div {
+    background: $backgroundOne;
+    
+    .skills--innerSection {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    h4 {
+        text-transform: capitalize;
+        margin: 5px 0 15px;
     }
 
     .skills-indvContainer {
         max-width: 50%;
         padding: 60px 0;
         text-align: center;
-        // border: 1px solid lighten($black, 30%);
 
             p {
                 padding: 10px 45px;
             }
     }
 
-    .skills-indvContainerFirst {
+    .skills-indvContainer:first-of-type {
             border-right: 1px solid lighten($black, 40%);
             border-bottom: 1px solid lighten($black, 40%);
         }
 
-    .skills-indvContainerSecond {
+    .skills-indvContainer:nth-of-type(2){
         border-bottom: 1px solid lighten($black, 40%);
     }
 
-    .skills-indvContainerThird {
+    .skills-indvContainer:nth-of-type(3) {
         border-right: 1px solid lighten($black, 40%);
+    }
+
+    img {
+        width: 100px;
     }
 }
 

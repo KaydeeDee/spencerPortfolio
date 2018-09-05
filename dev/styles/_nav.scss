@@ -11,10 +11,9 @@ nav ul {
                 a {
                     color: $white;
                     @include font-size-value(18);
-                    padding: 0 10%;
+                    padding: 0 10px;
                     transition: $transitionTiming;
                     text-transform: uppercase;
-                    width: 50px;
 
                 }
 
@@ -58,25 +57,22 @@ nav ul {
 }
 
 .navSelected {
-    color: $highlight;
+    opacity: 1;
 }
 
 //nav on scroll
 .nav--scroll {
     position: fixed;
-    background: $white;
+    background: $black;
     top: 0;
     padding: 20px 0;
     width: 100%;
     margin: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    // box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     z-index: 5;
-
-        a {
-            color: $black;
-        }
+    border: none;
 }
 
 // fade in for scroll
@@ -93,27 +89,49 @@ nav ul {
     cursor: pointer;
     z-index: 5;
     position: fixed;
-    border: 1px solid red;
     right: 15px;
     top: 0;
 
-        &:hover {
-            background: pink;
-        }
-
     span {
-        width: 20px;
-        height: 3px;
-        background: red;
+        width: 27px;
+        height: 4px;
+        background: $white;
         display: inline-block;
-        margin: 2px 0;
+        margin: 3px 0;
+        transition: $transitionTiming;
+    }
+
+    &:hover {
+        span {
+            background: red;
+        }
+    }
+
+}
+
+.open--hamburger {
+    .hamburger--clickContainer {
+
+        span:nth-of-type(1) {
+            transform: rotate(-30deg) translateX(1px) translateY(3px);
+            width: 30px;
+            border-top-left-radius: 3px;
+        }
+        span:nth-of-type(2) {
+            transform: rotate(-30deg) translateX(-1px) translateY(2.5px);
+            width: 13px;
+        }
+        span:nth-of-type(3) {
+            transform: rotate(30deg) translateY(-4px);
+            width: 30px;
+        }
     }
 }
 
 .open--logoSocials{
     width: 100%;
     position: fixed;
-    border: 1px solid red;
+    background: $black;
     padding-left: 15px;
 
     img, ul:first-of-type {
@@ -139,10 +157,6 @@ nav ul {
     padding: 25px;
     z-index: 10;
     position: fixed;
-
-    span:first-of-type {
-        background: pink;
-    }
 
     ~ .hamburgerNav {
         display: block;

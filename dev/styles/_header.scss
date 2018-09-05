@@ -38,3 +38,21 @@ header {
         }
 
 }
+
+// media queries
+@media (max-width: 950px) {
+    header .headerTitles {
+        padding-top: 30vw;
+
+    h1 {
+        font-size: 7vw;
+        }
+
+    h2 {
+        font-size: 5vw;
+        width: 50%;
+        line-height: 1.2;
+    }
+
+    }
+}

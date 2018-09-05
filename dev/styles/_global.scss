@@ -6,7 +6,7 @@ html {
 
 // stripping styles
 
-h1, h2, h3, h4, ul, li, p {
+h1, h2, h3, h4, ul, li, p , label {
     margin: 0;
     padding: 0;
     color: $black;
@@ -40,7 +40,7 @@ img {
 body {
     background: $white;
 
-    p, a, button {
+    p, a, button, label, textarea::placeholder {
         @include font-size-value(17);
         font-family: $body-text;
     }
@@ -66,7 +66,7 @@ h3 {
     letter-spacing: 1px;
     font-family: $header-text;
     @include font-size-value(45);
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
     text-align: center;
     font-weight: 700;
 }
@@ -129,7 +129,6 @@ section a {
     position: absolute;
     top: -10px;
     right: 15px;
-    // margin-left: -5px;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent $black transparent;

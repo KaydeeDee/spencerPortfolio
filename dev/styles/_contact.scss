@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+        span {
+            color: #e05d47;
+            display: inline-block;
+            @include font-size-value(12);
+            margin-bottom: 5px;
+        }
+
+    input{
+        width: 100%;
+    }
+
+    input, textarea{
+        border: 2px solid $black;
+    }
+
+    button {
+        width: 50%;
+        align-self: center;
+    }
+
+    input, textarea, button {
+        margin: 0 0 15px 0;
+    }
+
+    input, textarea, button {
+        align-self: center;
+    }
+
+    label {
+        align-self: flex-start;
+    }
+
+    textarea {
+        resize: none;
+        overflow: auto;
+        vertical-align: top;
+        background: $white;
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+    }
+}

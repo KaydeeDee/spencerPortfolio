@@ -1,6 +1,6 @@
 .educationSection {
-    background: linear-gradient(#e66465, #9198e5), url('assets/education.jpg');
-    background-position-y: 50%;
+    background: linear-gradient(to bottom, rgba($black, 0.6), rgba($black, 0.6)), url('assets/education.jpg');
+    background-position: 75% 40%;
     background-size: cover;
 
 
@@ -27,4 +27,17 @@
       p {
           color: $white;
       }
+}
+
+// media queries
+@media (max-width: 950px){
+    .educationSection--body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .education-indvEd {
+        margin: 15px 0;
+    }
 }

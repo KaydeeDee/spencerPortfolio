@@ -285,19 +285,19 @@ img {
 
 body {
   background: #FCFBF9; }
-  body p, body a, body button, body label, body textarea::-webkit-input-placeholder {
+  body p, body a, body button, body label, body textarea::-webkit-input-placeholder, body textarea, body input {
     font-size: 17px;
     font-size: 1.7rem;
     font-family: "Open Sans", sans-serif; }
-  body p, body a, body button, body label, body textarea:-ms-input-placeholder {
+  body p, body a, body button, body label, body textarea:-ms-input-placeholder, body textarea, body input {
     font-size: 17px;
     font-size: 1.7rem;
     font-family: "Open Sans", sans-serif; }
-  body p, body a, body button, body label, body textarea::-ms-input-placeholder {
+  body p, body a, body button, body label, body textarea::-ms-input-placeholder, body textarea, body input {
     font-size: 17px;
     font-size: 1.7rem;
     font-family: "Open Sans", sans-serif; }
-  body p, body a, body button, body label, body textarea::placeholder {
+  body p, body a, body button, body label, body textarea::placeholder, body textarea, body input {
     font-size: 17px;
     font-size: 1.7rem;
     font-family: "Open Sans", sans-serif; }
@@ -342,10 +342,10 @@ h4 {
 
 section a {
   color: #3a3838;
-  border-bottom: 2px dotted #e05d47;
+  border-bottom: 2px dotted #e96117;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   section a:hover, section a:focus {
-    color: #e05d47; }
+    color: #e96117; }
 
 .styledMiniLine {
   display: inline-block;
@@ -436,7 +436,7 @@ nav ul {
     padding: 0 6px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
     .logoSocials div i:hover, .logoSocials div i.ai:hover {
-      color: #e05d47; }
+      color: #e96117; }
   .logoSocials div i {
     font-size: 18px;
     font-size: 1.8rem; }
@@ -454,7 +454,7 @@ nav ul {
   position: fixed;
   background: #3a3838;
   top: 0;
-  padding: 20px 0;
+  padding: 12px 0;
   width: 100%;
   margin: 0;
   left: 0;
@@ -686,8 +686,8 @@ header {
     text-align: center; } }
 
 .educationSection {
-  background: linear-gradient(to bottom, rgba(58, 56, 56, 0.6), rgba(58, 56, 56, 0.6)), url("assets/education.jpg");
-  background-position: 75% 40%;
+  background: linear-gradient(to bottom, rgba(58, 56, 56, 0.45), rgba(58, 56, 56, 0.45)), url("assets/education.jpg");
+  background-position: 80% 40%;
   background-size: cover; }
   .educationSection h3 {
     color: #FCFBF9; }
@@ -754,21 +754,51 @@ form {
   form input {
     width: 100%; }
   form input, form textarea {
-    border: 2px solid #3a3838; }
+    border: 2px solid #3a3838;
+    padding: 5px; }
   form button {
     width: 50%;
     align-self: center; }
   form input, form textarea, form button {
-    margin: 0 0 15px 0; }
-  form input, form textarea, form button {
+    margin: 5px 0 15px 0;
     align-self: center; }
-  form label {
-    align-self: flex-start; }
   form textarea {
     resize: none;
     overflow: auto;
     vertical-align: top;
     background: #FCFBF9;
     width: 100%; }
-  form ul {
-    display: flex; }
+  form label:first-of-type, form label:nth-of-type(2),
+  form span:first-of-type, form span:nth-of-type(2), form input:first-of-type, form input:nth-of-type(2) {
+    width: 50%; }
+  form label:first-of-type, form label:nth-of-type(2),
+  form span:first-of-type, form span:nth-of-type(2) {
+    margin: 0 auto; }
+
+.contact--socials {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between; }
+  .contact--socials li {
+    border: 2px solid #3a3838;
+    background: #3a3838;
+    padding: 15px 10px; }
+    .contact--socials li a {
+      border: none;
+      padding: 10px; }
+    .contact--socials li i {
+      color: #FCFBF9;
+      font-size: 30px;
+      font-size: 3rem; }
+      .contact--socials li i:hover {
+        color: #e96117; }
+
+footer {
+  text-align: center;
+  padding: 0 0 10px 0; }
+  footer a {
+    text-align: center;
+    font-variant: small-caps; }
+    footer a:hover {
+      color: #e96117; }

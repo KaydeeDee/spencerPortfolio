@@ -17,6 +17,7 @@ form {
 
     input, textarea{
         border: 2px solid $black;
+         padding: 5px;
     }
 
     button {
@@ -25,15 +26,8 @@ form {
     }
 
     input, textarea, button {
-        margin: 0 0 15px 0;
-    }
-
-    input, textarea, button {
+        margin: 5px 0 15px 0;
         align-self: center;
-    }
-
-    label {
-        align-self: flex-start;
     }
 
     textarea {
@@ -44,7 +38,42 @@ form {
         width: 100%;
     }
 
-    ul {
-        display: flex;
+    label:first-of-type, label:nth-of-type(2),
+    span:first-of-type, span:nth-of-type(2),  input:first-of-type, input:nth-of-type(2) {
+        width: 50%;
     }
+
+    label:first-of-type, label:nth-of-type(2),
+    span:first-of-type, span:nth-of-type(2), {
+        margin: 0 auto;
+    }
+
+}
+
+.contact--socials {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+
+        li {
+            border: 2px solid $black;
+            background: $black;
+            padding: 15px 10px;
+
+                a {
+                    border: none;
+                    padding: 10px;
+                }
+
+                i {
+                    color: $white;
+                    @include font-size-value(30);
+
+                        &:hover {
+                            color: $highlight;
+                        }
+                }
+        }
+
 }

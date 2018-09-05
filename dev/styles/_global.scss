@@ -40,7 +40,7 @@ img {
 body {
     background: $white;
 
-    p, a, button, label, textarea::placeholder {
+    p, a, button, label, textarea::placeholder, textarea, input {
         @include font-size-value(17);
         font-family: $body-text;
     }

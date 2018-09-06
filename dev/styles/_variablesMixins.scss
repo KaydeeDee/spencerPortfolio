@@ -13,6 +13,7 @@ $backgroundOne: rgba(74,83, 61, 0.1);
 $header-text: 'Open Sans', sans-serif;
 $body-text: 'Open Sans', sans-serif;
 
+
     //transition 
     $transitionTiming: all 0.3s cubic-bezier(.25,.8,.25,1);
 
@@ -54,7 +55,7 @@ $body-text: 'Open Sans', sans-serif;
     font-variant: small-caps;
     // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: $transitionTiming;
-    @include font-size-value(18);
+    @include font-size-value(19);
 
         &:hover {
             // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

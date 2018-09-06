@@ -1,9 +1,27 @@
+.contactSection {
+    background: url('assets/contactBackground3.jpg');
+    // background-position: 25% 10%;
+    background-size: cover;
+
+    h3 {
+        padding: 15px 0 0 0;
+        margin-bottom: 25px;
+    }
+}
+
+.contact--box {
+    background: rgba(252, 251, 249, 0.95);
+    width: 60%;
+    margin: 0 auto;
+}
+
 form {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    padding-bottom: 15px;
     justify-content: center;
-    width: 80%;
+    width: 60%;
         span {
             color: #e05d47;
             display: inline-block;
@@ -15,13 +33,20 @@ form {
         width: 100%;
     }
 
+    label {
+        margin: 0;
+        padding: 0;
+        color: $black;
+        text-transform: capitalize;
+    }
+
     input, textarea{
         border: 2px solid $black;
          padding: 5px;
     }
 
     button {
-        width: 50%;
+        width: 100%;
         align-self: center;
     }
 
@@ -38,27 +63,18 @@ form {
         width: 100%;
     }
 
-    label:first-of-type, label:nth-of-type(2),
-    span:first-of-type, span:nth-of-type(2),  input:first-of-type, input:nth-of-type(2) {
-        width: 50%;
-    }
-
-    label:first-of-type, label:nth-of-type(2),
-    span:first-of-type, span:nth-of-type(2), {
-        margin: 0 auto;
-    }
-
 }
 
 .contact--socials {
     width: 80%;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 0 0 15px 0;
     display: flex;
     justify-content: space-between;
 
         li {
-            border: 2px solid $black;
-            background: $black;
+            // border: 2px solid $white;
+            // background: $white;
             padding: 15px 10px;
 
                 a {
@@ -67,7 +83,7 @@ form {
                 }
 
                 i {
-                    color: $white;
+                    color: $black;
                     @include font-size-value(30);
 
                         &:hover {

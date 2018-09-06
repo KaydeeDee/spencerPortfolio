@@ -6,7 +6,7 @@ html {
 
 // stripping styles
 
-h1, h2, h3, h4, ul, li, p , label {
+h1, h2, h3, h4, ul, li, p {
     margin: 0;
     padding: 0;
     color: $black;
@@ -41,7 +41,7 @@ body {
     background: $white;
 
     p, a, button, label, textarea::placeholder, textarea, input {
-        @include font-size-value(17);
+        @include font-size-value(18);
         font-family: $body-text;
     }
 
@@ -57,22 +57,22 @@ body {
 
 // sections
 .globalSectionBase {
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
 // titles
 h3 {
     font-variant: small-caps;
-    letter-spacing: 1px;
+    letter-spacing: 1.3px;
     font-family: $header-text;
-    @include font-size-value(45);
+    @include font-size-value(50);
     margin: 0 0 50px 0;
     text-align: center;
     font-weight: 700;
 }
 
 h4 {
-    @include font-size-value(19.5);
+    @include font-size-value(20);
     font-family: $header-text;
     font-weight: 600;
 }

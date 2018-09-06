@@ -260,7 +260,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-size: 62.5%; }
 
-h1, h2, h3, h4, ul, li, p, label {
+h1, h2, h3, h4, ul, li, p {
   margin: 0;
   padding: 0;
   color: #3a3838; }
@@ -286,20 +286,20 @@ img {
 body {
   background: #FCFBF9; }
   body p, body a, body button, body label, body textarea::-webkit-input-placeholder, body textarea, body input {
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "Open Sans", sans-serif; }
   body p, body a, body button, body label, body textarea:-ms-input-placeholder, body textarea, body input {
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "Open Sans", sans-serif; }
   body p, body a, body button, body label, body textarea::-ms-input-placeholder, body textarea, body input {
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "Open Sans", sans-serif; }
   body p, body a, body button, body label, body textarea::placeholder, body textarea, body input {
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "Open Sans", sans-serif; }
   body p {
     line-height: 1.6; }
@@ -307,21 +307,21 @@ body {
     color: #3a3838; }
 
 .globalSectionBase {
-  padding: 80px 0; }
+  padding: 70px 0; }
 
 h3 {
   font-variant: small-caps;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
   font-family: "Open Sans", sans-serif;
-  font-size: 45px;
-  font-size: 4.5rem;
+  font-size: 50px;
+  font-size: 5rem;
   margin: 0 0 50px 0;
   text-align: center;
   font-weight: 700; }
 
 h4 {
-  font-size: 19.5px;
-  font-size: 1.95rem;
+  font-size: 20px;
+  font-size: 2rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600; }
 
@@ -334,8 +334,8 @@ h4 {
   letter-spacing: 1.2px;
   font-variant: small-caps;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  font-size: 18px;
-  font-size: 1.8rem; }
+  font-size: 19px;
+  font-size: 1.9rem; }
   .globalButton:hover {
     color: #FCFBF9;
     background: #3a3838; }
@@ -573,13 +573,14 @@ nav ul {
     display: flex; } }
 
 header {
-  background: url("assets/landscapev6.jpg");
+  background: url("assets/landscape-v3.jpg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 10%; }
+  background-position-y: 10%;
+  background-attachment: fixed; }
   header .headerTitles {
-    padding-top: 10vw;
+    padding-top: 9vw;
     margin-left: 13%; }
     header .headerTitles > div {
       margin-top: 8px; }
@@ -590,11 +591,11 @@ header {
   header h1 {
     font-size: 4.8vw;
     font-weight: 600;
-    letter-spacing: 2.5px; }
+    letter-spacing: 2.7px; }
   header h2 {
     font-size: 3.2vw;
     font-weight: 400;
-    letter-spacing: 1.8px;
+    letter-spacing: 1.9px;
     width: 30%;
     line-height: 3.4vw;
     font-weight: 300;
@@ -739,12 +740,25 @@ header {
   .skillsSection img {
     width: 100px; }
 
+.contactSection {
+  background: url("assets/contactBackground3.jpg");
+  background-size: cover; }
+  .contactSection h3 {
+    padding: 15px 0 0 0;
+    margin-bottom: 25px; }
+
+.contact--box {
+  background: rgba(252, 251, 249, 0.95);
+  width: 60%;
+  margin: 0 auto; }
+
 form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding-bottom: 15px;
   justify-content: center;
-  width: 80%; }
+  width: 60%; }
   form span {
     color: #e05d47;
     display: inline-block;
@@ -753,11 +767,16 @@ form {
     margin-bottom: 5px; }
   form input {
     width: 100%; }
+  form label {
+    margin: 0;
+    padding: 0;
+    color: #3a3838;
+    text-transform: capitalize; }
   form input, form textarea {
     border: 2px solid #3a3838;
     padding: 5px; }
   form button {
-    width: 50%;
+    width: 100%;
     align-self: center; }
   form input, form textarea, form button {
     margin: 5px 0 15px 0;
@@ -768,27 +787,20 @@ form {
     vertical-align: top;
     background: #FCFBF9;
     width: 100%; }
-  form label:first-of-type, form label:nth-of-type(2),
-  form span:first-of-type, form span:nth-of-type(2), form input:first-of-type, form input:nth-of-type(2) {
-    width: 50%; }
-  form label:first-of-type, form label:nth-of-type(2),
-  form span:first-of-type, form span:nth-of-type(2) {
-    margin: 0 auto; }
 
 .contact--socials {
   width: 80%;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 0 0 15px 0;
   display: flex;
   justify-content: space-between; }
   .contact--socials li {
-    border: 2px solid #3a3838;
-    background: #3a3838;
     padding: 15px 10px; }
     .contact--socials li a {
       border: none;
       padding: 10px; }
     .contact--socials li i {
-      color: #FCFBF9;
+      color: #3a3838;
       font-size: 30px;
       font-size: 3rem; }
       .contact--socials li i:hover {
@@ -796,9 +808,11 @@ form {
 
 footer {
   text-align: center;
-  padding: 0 0 10px 0; }
+  padding: 10px 0;
+  background: #3a3838; }
   footer a {
     text-align: center;
-    font-variant: small-caps; }
+    font-variant: small-caps;
+    color: #FCFBF9; }
     footer a:hover {
       color: #e96117; }

@@ -454,7 +454,7 @@ nav ul {
   position: fixed;
   background: #3a3838;
   top: 0;
-  padding: 12px 0;
+  padding: 12px 110px;
   width: 100%;
   margin: 0;
   left: 0;
@@ -594,7 +594,6 @@ header {
     letter-spacing: 2.7px; }
   header h2 {
     font-size: 3.2vw;
-    font-weight: 400;
     letter-spacing: 1.9px;
     width: 30%;
     line-height: 3.4vw;
@@ -687,7 +686,7 @@ header {
     text-align: center; } }
 
 .educationSection {
-  background: linear-gradient(to bottom, rgba(58, 56, 56, 0.45), rgba(58, 56, 56, 0.45)), url("assets/education.jpg");
+  background: linear-gradient(to bottom, rgba(58, 56, 56, 0.1), rgba(58, 56, 56, 0.1)), url("assets/education.jpg");
   background-position: 80% 40%;
   background-size: cover; }
   .educationSection h3 {
@@ -730,13 +729,6 @@ header {
     text-align: center; }
     .skillsSection .skills-indvContainer p {
       padding: 10px 45px; }
-  .skillsSection .skills-indvContainer:first-of-type {
-    border-right: 1px solid #a19d9d;
-    border-bottom: 1px solid #a19d9d; }
-  .skillsSection .skills-indvContainer:nth-of-type(2) {
-    border-bottom: 1px solid #a19d9d; }
-  .skillsSection .skills-indvContainer:nth-of-type(3) {
-    border-right: 1px solid #a19d9d; }
   .skillsSection img {
     width: 100px; }
 
@@ -748,7 +740,7 @@ header {
     margin-bottom: 25px; }
 
 .contact--box {
-  background: rgba(252, 251, 249, 0.95);
+  background: #fcfbf9;
   width: 60%;
   margin: 0 auto; }
 
